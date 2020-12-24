@@ -28,36 +28,42 @@ public class Controlador {
 
     @GetMapping("/")
     public String inicioControlador(Model model) {
-
-        String firstString = "Hola hola test";
-
-        model.addAttribute("firstString", firstString);
-
         return "index";
     }
 
-    @GetMapping("/frutas.html")
+    @GetMapping("/verduras_frutas.html")
     public String seccionFrutas(Model model) {
         List<Fruta> frutas = (List) servicioFruta.listarObjeto();
         model.addAttribute("frutas", frutas);
-        return "frutas";
+        return "verduras_frutas";
     }
 
-    @GetMapping("/verduras.html")
+    @GetMapping("/carnes.html")
     public String seccionVerduras(Model model) {
         List<Verdura> verduras = (List) servicioVerdura.listarObjeto();
         model.addAttribute("verduras", verduras);
-        return "verduras";
+        return "carnes";
     }
 
-    @GetMapping("/bebidas.html")
+    @GetMapping("/bebidas_frituras.html")
     public String seccionBebidas(Model model) {
         List<Bebida> bebidas = (List) servicioBebida.listarObjeto();
         model.addAttribute("bebidas", bebidas);
-        return "bebidas";
+        return "bebidas_frituras";
     }
-    @GetMapping("/frame1.html")
+
+    @GetMapping("/latas.html")
     public String seccionFrame1() {
-        return "frame1";
+        return "latas";
+    }
+
+    @GetMapping("/especias.html")
+    public String seccionEspecias() {
+        return "especias";
+    }
+
+    @GetMapping("/pedido.html")
+    public String seccionPedido() {
+        return "pedido";
     }
 }

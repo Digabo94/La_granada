@@ -1,31 +1,15 @@
 <!DOCTYPE html>
-<html xmlns=th:"http://www.thymeleaf.com">
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <title>Verduras</title>
         <meta charset="UTF-8">
-        <link th:href="@{/css/style.css}" rel="stylesheet"/>
+        <link th:href="@{/css/main.css}" rel="stylesheet"/>
+        <link th:href="@{/css/grid.css}" rel="stylesheet"/>
     </head>
     <body>
-        <h1 th:text="Verduras"></h1>
-        <a th:text="@{index.html}" th:text="Regresar"></a>
-        <div th:if="${verduras != null and !verduras.empty}">
-            <table>
-                <tr>
-                    <th th:text="ID">ID</th>
-                    <th th:text="Nombre">Nombre</th>
-                    <th th:text="Tamanio">Tamanio</th>
-                    <th th:text="Sabor">Sabor</th>
-                </tr>
-                <tr th:each="verdura : ${verduras}">
-                    <td th:text="${verdura.idVerdura}"></td>
-                    <td th:text="${verdura.nombre}"></td>
-                    <td th:text="${verdura.tamanio}"></td>
-                    <td th:text="${verdura.sabor}"></td>
-                </tr>
-            </table>
-        </div>
-        <div th:if="${verduras == null and verduras.empty}">
-            <h5>La lista de verduras esta vacia</h5>
-        </div>
+        <nav th:replace="layout/plantilla.html :: nav"></nav>
+        <h1>Frutas y verduras</h1>
+        <footer th:replace="layout/plantilla.html :: footer"></footer>
     </body>
 </html>

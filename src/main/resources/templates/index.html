@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html xmlns=th:"http://www.thymeleaf.com">
+<html xmlns:th="http://www.thymeleaf.com"
+      xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <title>La granada</title>
         <meta charset="UTF-8">
@@ -9,6 +10,8 @@
         <script th:src="@{/script/script.js}"></script>
     </head>
     <body>
+        <!------------------------------------------------------------Nav bar-->
+        <nav th:replace="layout/plantilla.html :: nav"></nav>
         <!---------------------------------------------------------------------Titulo-->
         <div class="titulo">La granada</div>
         <div class="subtitle">abarrotes</div>
@@ -62,22 +65,11 @@
                 <a th:href="@{especias.html}" class="linkEspecias">
                     <h2 class="textEspecias">Especias</h2>                            
                 </a> 
-                <a th:href="@{bebidas_papas.html}" class="linkBebidasYPapas">
-                    <h2 class="textBebidasYPapas">Bebidas y papitas</h2>                            
+                <a th:href="@{bebidas_frituras.html}" class="linkBebidasYFrituras">
+                    <h2 class="textBebidasYFrituras">Bebidas y frituras</h2>                            
                 </a> 
             </div>
         </div>
-        <footer>
-            <span class="direccion">
-                Direccion: Nogales, Sonora
-                <br>
-                Colonia Las Bellotas #315
-                <br>
-                Calle Bellotas
-            </span>
-            <span class="email">
-                Contacto: lagranada.contact@lagranada.com
-            </span>
-        </footer>
+        <footer th:replace="layout/plantilla.html :: footer"></footer>
     </body>
 </html>

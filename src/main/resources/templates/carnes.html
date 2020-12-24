@@ -1,11 +1,14 @@
 <!DOCTYPE html>
-<html xmlns=th:"http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <link th:href="@{/css/frame1.css}" rel="stylesheet"/>
+        <title>La granada</title>
+        <link th:href="@{/css/grid.css}" rel="stylesheet"/>
+        <link th:href="@{/css/main.css}" rel="stylesheet"/>
     </head>
     <body>
-        <h1>FRUTAS</h1>
+        <nav th:replace="layout/plantilla.html :: nav"></nav>
+        <h1 th:text="Carne"></h1>
+        <footer th:replace="layout/plantilla.html :: footer"></footer>
     </body>
 </html>

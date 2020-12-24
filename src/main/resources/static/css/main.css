@@ -8,6 +8,8 @@
     --shadow-title: 2px 2px 8px;
     --title-size: 100px;
     --subtitle-size: 35px;
+    /*Nav bar*/
+    --color-nav:#ccb501;
     /*Posicion de links y dimensiones*/
     --margin-link: 50px;
     --width-link: 390px;
@@ -25,6 +27,39 @@ body{
     background-color: var(--body-color);
     margin: auto;
 }
+
+/*---------------------------------------------------------------------Nav bar*/
+nav{
+    background-color: var(--color-nav);
+    margin-top: -16px;
+}
+
+.lista_nav{
+    display: flex;
+    justify-content: flex-end;
+    padding: 12px 10px;
+}
+ul{
+    list-style: none;
+}
+ul span{
+    margin-left: 12px;
+}
+
+li a{
+    margin-left: 15px;
+    text-decoration: none;
+    color: var(--text-link-hover);
+    padding:5px;
+    border-radius: 2px;
+}
+
+li a:hover{
+    color: var(--text-link);
+    box-shadow: var(--text-shadow-link);
+}
+
+/*----------------------------------------------------------------------Titulo*/
 
 .titulo{
     font-size: var(--title-size);
@@ -47,6 +82,7 @@ div div div img{
     margin-top: 40px;
     max-width: 100%;
 }
+
 /*-----------------------------------------------------------DESCRIPCION Y SELECCION*/
 
 .descripcion{
@@ -77,7 +113,7 @@ div div div img{
     color: var(--text-link);
 }
 
-.linkBebidasYPapas:hover, .linkCarnes:hover, .linkEspecias:hover, .linkLatas:hover, .linkVerdurasYFrutas:hover{
+.linkBebidasYFrituras:hover, .linkCarnes:hover, .linkEspecias:hover, .linkLatas:hover, .linkVerdurasYFrutas:hover{
     background-image: var(--a-image-hover);
     background-repeat: no-repeat;
     background-position: center;
@@ -85,10 +121,10 @@ div div div img{
     box-shadow: var(--box-shadow-link);
     color: var(--text-link-hover);
     text-shadow: var(--text-shadow-link);
-    
+
 }
 
-.textBebidasYPapas, .textCarnes, .textEspecias, .textLatas, .textVerdurasYFrutas{
+.textBebidasYFrituras, .textCarnes, .textEspecias, .textLatas, .textVerdurasYFrutas{
     margin-top: 75px;
     font-size: xx-large;
 }
@@ -101,7 +137,7 @@ div div div img{
 /*----------------------------------------------------------------------footer*/
 
 footer{
-    background-color: black;
+    background-color: var(--color-nav);
     color:white;
     display: flex;
     justify-content: space-between;
