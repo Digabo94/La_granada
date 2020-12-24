@@ -1,0 +1,23 @@
+.maxContainer{
+    max-width:100%;
+}
+
+.row_h{
+    display:flex;
+}
+
+.col20{
+    width: 20%;
+}
+
+.col50{
+    width: 50%;
+}
+
+.col33{
+    width: 33.33%;
+}
+/*--------------------------------------------------------------------Otros grid*/
+div img{
+    
+}

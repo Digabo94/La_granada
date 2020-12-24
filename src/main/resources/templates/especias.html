@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns=th:"http://www.thymeleaf.org">
+    <head>
+        <title>Frutas</title>
+        <meta charset="UTF-8">
+        <link th:href="@{/css/style.css}" rel="stylesheet"/>
+    </head>
+    <body>
+        <h1 th:text="Frutas"></h1>
+        <a th:text="@{index.html}" th:text="Regresar"></a>
+        <div th:if="${frutas != null and !frutas.empty}">
+            <table>
+                <tr>
+                    <th th:text="ID">ID</td>
+                    <th th:text="Nombre">Nombre</th>
+                    <th th:text="Sabor">Sabor</th>
+                    <th th:text="Tamanio">Tamanio</th>
+                    <th th:text="Semillas">Semillas</th>
+                </tr>
+                <tr th:each="fruta : ${frutas}">
+                    <td th:text="${fruta.idFruta}"></td>
+                    <td th:text="${fruta.nombre}"></td>
+                    <td th:text="${fruta.sabor}"></td>
+                    <td th:text="${fruta.tamanio}"></td>
+                    <td th:text="${fruta.semillas}"></td>
+                </tr> 
+                
+        </div>
+        <div th:if="${frutas == null and frutas.empty}">
+            <h2>La lista de frutas esta vacia</h2>
+        </div>
+    </table>
+</body>
+</html>

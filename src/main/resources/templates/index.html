@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html xmlns=th:"http://www.thymeleaf.com">
+    <head>
+        <title>La granada</title>
+        <meta charset="UTF-8">
+        <!--Autor: Diego G. Morales-->
+        <link th:href="@{/css/main.css}" rel="stylesheet"/>
+        <link th:href="@{/css/grid.css}" rel="stylesheet"/>
+        <script th:src="@{/script/script.js}"></script>
+    </head>
+    <body>
+        <!---------------------------------------------------------------------Titulo-->
+        <div class="titulo">La granada</div>
+        <div class="subtitle">abarrotes</div>
+        <!------------------------------------------------------------Imagenes muestra-->
+        <div class="maxContainer">
+            <div class="row_h">
+                <div class="col20">
+                    <img th:src="@{/img/verduras.jpg}" alt="verduras y frutas"/>
+                </div>
+                <div class="col20">
+                    <img th:src="@{/img/carnes.jpg}" alt="carnes"/>
+                </div>
+                <div class="col20">
+                    <img th:src="@{/img/latas.jpg}" alt="latas"/>
+                </div>
+                <div class="col20">
+                    <img th:src="@{/img/chucherias.jpg}" alt="papitas y sodas"/>
+                </div>
+                <div class="col20">
+                    <img th:src="@{/img/condimentos.png}" alt="condimentos"/>
+                </div>
+            </div>
+            <br/>
+            <br/>
+            <br/>
+            <p>
+                <!----------------------------------------------------Descripcion y seleccion-->
+            <div class="descripcion">
+                <h3>Bienvenido/a a la unica tienda en linea de abarrotes, en la que usted hace su pedido
+                    y nosotros le enviamos su encargo.</h3>                
+            </div>
+
+            <div>
+                <h3 class="seleccion">A continuacion puede seleccionar lo que guste de nuestra variedad de productos
+                    y agregarla al carrito de compras.</h3>
+            </div>
+            <!------------------------------------------------------Seleccion de producto-->
+
+            <div class="row_h" id="rowlinks">
+                <a th:href="@{carnes.html}" class="linkCarnes">
+                    <h2 class="textCarnes">Carnes</h2>                            
+                </a> 
+                <a th:href="@{verduras_frutas.html}" class="linkVerdurasYFrutas">
+                    <h2 class="textVerdurasYFrutas">Fruta y verdura</h2>                            
+                </a> 
+            </div>
+            <div class="row_h" id="rowlinks">
+                <a th:href="@{latas.html}" class="linkLatas">
+                    <h2 class="textLatas">Enlatados</h2>                            
+                </a> 
+                <a th:href="@{especias.html}" class="linkEspecias">
+                    <h2 class="textEspecias">Especias</h2>                            
+                </a> 
+                <a th:href="@{bebidas_papas.html}" class="linkBebidasYPapas">
+                    <h2 class="textBebidasYPapas">Bebidas y papitas</h2>                            
+                </a> 
+            </div>
+        </div>
+        <footer>
+            <span class="direccion">
+                Direccion: Nogales, Sonora
+                <br>
+                Colonia Las Bellotas #315
+                <br>
+                Calle Bellotas
+            </span>
+            <span class="email">
+                Contacto: lagranada.contact@lagranada.com
+            </span>
+        </footer>
+    </body>
+</html>

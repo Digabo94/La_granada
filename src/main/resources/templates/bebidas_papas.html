@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns=th:"http://www.thymeleaf.org">
+    <head>
+        <title>Bebidas</title>
+        <meta charset="UTF-8">
+        <link th:href="@{/css/style.css}" rel="stylesheet"/>
+    </head>
+    <body>
+        <h1 th:text="Bebidas"></h1>
+        <div th:if="${bebidas != null and !bebidas.empty}">
+            <table>
+                <tr>
+                    <th th:text="ID"></th>
+                    <th th:text="Nombre"></th>
+                    <th th:text="Sabor"></th>
+                </tr>
+                <tr th:each="bebida : ${bebidas}">
+                    <td th:text="${bebida.idBebida}"></td>
+                    <td th:text="${bebida.nombre}"></td>
+                    <td th:text="${bebida.sabor}"></td>
+                </tr>
+            </table>
+        </div>
+        <div th:if="${bebidas == null and bebidas.empty}">
+            <h5 th:text="La lista de bebidas esta vacia"></h5>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,121 @@
+:root{
+    /*Variables background*/
+    --body-color: brown;
+    --a-image: url("/img/first_img.png");
+    --a-image-hover: url("/img/transparent_def_def.png");
+    /*Variables texto*/
+    --font-title: "Stencil Std","Trattatello","Jazz LET","URW Chancery L";
+    --shadow-title: 2px 2px 8px;
+    --title-size: 100px;
+    --subtitle-size: 35px;
+    /*Posicion de links y dimensiones*/
+    --margin-link: 50px;
+    --width-link: 390px;
+    --height-link: 190px;
+    --border-radius-link: 10px;
+    --box-shadow-link: 3px 3px 5px 0px black;
+    --text-link: #b48989;
+    --text-link-hover: #6b5858;
+    --text-shadow-link: 1px 1px 2px black;
+    --margin-top-link: 75%;
+}
+
+
+body{
+    background-color: var(--body-color);
+    margin: auto;
+}
+
+.titulo{
+    font-size: var(--title-size);
+    font-family: var(--font-title);
+    text-align: center;
+    text-shadow: var(--shadow-title);
+}
+
+.subtitle{
+    font-size: var(--subtitle-size);
+    font-family: var(--font-title);
+    text-align: center;
+    margin-left: 400px;
+    margin-top: -25px;
+    text-shadow: var(--shadow-title);
+}
+
+/*----------------------------------------------------------INICIO NAV BAR*/
+div div div img{
+    margin-top: 40px;
+    max-width: 100%;
+}
+/*-----------------------------------------------------------DESCRIPCION Y SELECCION*/
+
+.descripcion{
+    padding: 10px 0px;
+    text-align: center;
+    max-width: 75%;
+    margin: auto;
+    box-shadow: 0px 0px 10px 10px;
+}
+
+
+.seleccion{
+    margin-top: 50px;
+    text-align: center;
+    margin-bottom: -30px;
+}
+
+/*------------------------------------------------------Seleccion de productos*/
+
+.linkCarnes, .linkVerdurasYFrutas, .linkBebidasYPapas, .linkEspecias, .linkLatas{
+    margin: var(--margin-link);
+    width: var(--width-link);
+    height: var(--height-link);
+    border-radius: var(--border-radius-link);
+    background-image: var(--a-image);
+    text-align: center;
+    text-decoration: none;
+    color: var(--text-link);
+}
+
+.linkBebidasYPapas:hover, .linkCarnes:hover, .linkEspecias:hover, .linkLatas:hover, .linkVerdurasYFrutas:hover{
+    background-image: var(--a-image-hover);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    box-shadow: var(--box-shadow-link);
+    color: var(--text-link-hover);
+    text-shadow: var(--text-shadow-link);
+    
+}
+
+.textBebidasYPapas, .textCarnes, .textEspecias, .textLatas, .textVerdurasYFrutas{
+    margin-top: 75px;
+    font-size: xx-large;
+}
+
+
+#rowlinks{
+    justify-content: center;
+}
+
+/*----------------------------------------------------------------------footer*/
+
+footer{
+    background-color: black;
+    color:white;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer span{
+    padding: 10px;
+}
+
+.email{
+    margin-top: 15px; 
+    margin-right: 15px;
+}
+
+.direccion{
+    margin-left: 15px;
+}
