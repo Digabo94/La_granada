@@ -4,12 +4,13 @@
     <head>
         <title>Frutas</title>
         <meta charset="UTF-8">
-        <link th:href="@{/css/main.css}" rel="stylesheet"/>
-        <link th:href="@{/css/grid.css}" rel="stylesheet"/>
+            <link th:href="@{/css/main.css}" rel="stylesheet"/>
+            <link th:href="@{/css/grid.css}" rel="stylesheet"/>
     </head>
     <body>
         <nav th:replace="layout/plantilla.html :: nav"></nav>
         <h1 th:text="Especias"></h1>
+        <div th:replace="layout/plantilla.html :: btn_car"></div>
         <footer th:replace="layout/plantilla.html :: footer"></footer>
     </body>
 </html>

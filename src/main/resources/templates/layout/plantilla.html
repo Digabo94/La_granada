@@ -9,7 +9,7 @@ and open the template in the editor.
     <head>
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
-            
+
     </head>
     <body>
         <nav th:fragment="nav" class="nav_bar">
@@ -19,28 +19,39 @@ and open the template in the editor.
                     <span>|</span>
                     <li><a th:href="@{carnes.html}">Carnes</a></li>
                     <span>|</span>
-                    <li><a th:href="@{verduras_frutas.html}">Fruta y verdura</a></li>
+                    <li><a th:href="@{verduras.html}">Verdura</a></li>
+                    <span>|</span>
+                    <li><a th:href="@{frutas.html}">Fruta</a></li>
                     <span>|</span>
                     <li><a th:href="@{latas.html}">Enlatados</a></li>
                     <span>|</span>
-                    <li><a th:href="@{bebidas_frituras.html}">Bebidas y frituras</a></li>
+                    <li><a th:href="@{bebidas.html}">Bebidas</a></li>
+                    <span>|</span>
+                    <li><a th:href="@{frituras.html}">Frituras</a></li>
                     <span>|</span>
                     <li><a th:href="@{especias.html}">Especias</a></li>
+                    <span>|</span>
                 </ul>
             </div>
         </nav>
+        
+        <div class="row_h" th:fragment="btn_car">
+            <button class="add" th:text="Agregar" id="btn_add"></button>
+            <button class="back" th:text="Regresar" id="btn_back"></button>
+        </div>
+        
         <footer th:fragment="footer">
             <span class="direccion">
                 Direccion: Nogales, Sonora
                 <br>
-                Colonia Las Bellotas #315
-                <br>
-                Calle Bellotas
-            </span>
-            <span class="email">
-                Contacto: lagranada.contact@lagranada.com
-            </span>
-        </footer>
-        
-    </body>
-</html>
+                    Colonia Las Bellotas #315
+                    <br>
+                        Calle Bellotas
+                        </span>
+                        <span class="email">
+                            Contacto: lagranada.contact@lagranada.com
+                        </span>
+                        </footer>
+
+                        </body>
+                        </html>

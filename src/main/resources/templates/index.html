@@ -52,22 +52,28 @@
 
             <div class="row_h" id="rowlinks">
                 <a th:href="@{carnes.html}" class="linkCarnes">
-                    <h2 class="textCarnes">Carnes</h2>                            
+                    <h2 class="textCarnes" th:text="Carnes"></h2>                            
                 </a> 
-                <a th:href="@{verduras_frutas.html}" class="linkVerdurasYFrutas">
-                    <h2 class="textVerdurasYFrutas">Fruta y verdura</h2>                            
+                <a th:href="@{verduras.html}" class="linkVerduras">
+                    <h2 class="textVerduras" th:text="Verduras"></h2>                            
                 </a> 
+                <a th:href="@{frutas.html}" class="linkFrutas">
+                    <h2 class="textFrutas" th:text="Frutas"></h2>
+                </a>
             </div>
             <div class="row_h" id="rowlinks">
                 <a th:href="@{latas.html}" class="linkLatas">
-                    <h2 class="textLatas">Enlatados</h2>                            
+                    <h2 class="textLatas" th:text="Enlatados"></h2>                            
                 </a> 
                 <a th:href="@{especias.html}" class="linkEspecias">
-                    <h2 class="textEspecias">Especias</h2>                            
+                    <h2 class="textEspecias" th:text="Especias"></h2>                            
                 </a> 
-                <a th:href="@{bebidas_frituras.html}" class="linkBebidasYFrituras">
-                    <h2 class="textBebidasYFrituras">Bebidas y frituras</h2>                            
+                <a th:href="@{bebidas.html}" class="linkBebidas">
+                    <h2 class="textBebidas" th:text="Bebidas"></h2>                            
                 </a> 
+                <a th:href="@{frituras.html}" class="linkFrituras">
+                    <h2 class="textFrituras" th:text="Frituras"></h2>
+                </a>
             </div>
         </div>
         <footer th:replace="layout/plantilla.html :: footer"></footer>

@@ -31,11 +31,16 @@ public class Controlador {
         return "index";
     }
 
-    @GetMapping("/verduras_frutas.html")
+    @GetMapping("/verduras.html")
     public String seccionFrutas(Model model) {
         List<Fruta> frutas = (List) servicioFruta.listarObjeto();
         model.addAttribute("frutas", frutas);
-        return "verduras_frutas";
+        return "verduras";
+    }
+    
+    @GetMapping("/frutas.html")
+    public String seccionFrutas(){
+        return "frutas";
     }
 
     @GetMapping("/carnes.html")
@@ -45,11 +50,16 @@ public class Controlador {
         return "carnes";
     }
 
-    @GetMapping("/bebidas_frituras.html")
+    @GetMapping("/bebidas.html")
     public String seccionBebidas(Model model) {
         List<Bebida> bebidas = (List) servicioBebida.listarObjeto();
         model.addAttribute("bebidas", bebidas);
-        return "bebidas_frituras";
+        return "bebidas";
+    }
+    
+    @GetMapping("/frituras.html")
+    public String seccionFrituras(){
+        return "frituras";
     }
 
     @GetMapping("/latas.html")

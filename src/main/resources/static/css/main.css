@@ -102,7 +102,7 @@ div div div img{
 
 /*------------------------------------------------------Seleccion de productos*/
 
-.linkCarnes, .linkVerdurasYFrutas, .linkBebidasYPapas, .linkEspecias, .linkLatas{
+.linkCarnes, .linkVerduras, .linkFrutas, .linkBebidas, .linkFrituras, .linkEspecias, .linkLatas{
     margin: var(--margin-link);
     width: var(--width-link);
     height: var(--height-link);
@@ -113,7 +113,7 @@ div div div img{
     color: var(--text-link);
 }
 
-.linkBebidasYFrituras:hover, .linkCarnes:hover, .linkEspecias:hover, .linkLatas:hover, .linkVerdurasYFrutas:hover{
+.linkBebidas:hover, .linkFrituras:hover, .linkCarnes:hover, .linkEspecias:hover, .linkLatas:hover, .linkVerduras:hover, .linkFrutas:hover{
     background-image: var(--a-image-hover);
     background-repeat: no-repeat;
     background-position: center;
@@ -124,7 +124,7 @@ div div div img{
 
 }
 
-.textBebidasYFrituras, .textCarnes, .textEspecias, .textLatas, .textVerdurasYFrutas{
+.textBebidas, .textFrituras, .textCarnes, .textEspecias, .textLatas, .textVerduras, .textFrutas{
     margin-top: 75px;
     font-size: xx-large;
 }
