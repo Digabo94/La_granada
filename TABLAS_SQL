@@ -1,0 +1,54 @@
+TABLAS SQL:
+
+#bebida
+-id_bebida INT
+-nombre VARCHAR(45)
+-volumen FLOAT
+-marca VARCHAR(45)
+-precio FLOAT
+-almacen INT
+
+#carne
+-id_carne INT
+-nombre VARCHAR(45)
+-marca VARCHAR(45)
+-precio FLOAT
+-almacen FLOAT
+
+#especia
+-id_especia INT
+-nombre VARCHAR(45)
+-marca VARCHAR (45)
+-precio FLOAT
+-almacen FLOAT
+
+#fritura
+-id_fritura INT
+-nombre VARCHAR(45)
+-masa FLOAT
+-marca VARCHAR(45)
+-precio FLOAT
+-almacen INT
+
+#fruta
+-id_fruta INT
+-nombre VARCHAR(45)
+-marca VARCHAR(45)
+-precio FLOAT
+-almacen FLOAT
+
+#lata
+-id_lata INT
+-nombre VARCHAR(45)
+-masa FLOAT
+-marca VARCHAR(45)
+-precio FLOAT
+-descripcion VARCHAR(150)
+-almacen INT
+
+#verdura
+-id_verdura INT
+-nombre VARCHAR(45)
+-marca VARCHAR(45)
+-precio FLOAT
+-almacen FLOAT

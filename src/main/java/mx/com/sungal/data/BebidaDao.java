@@ -1,8 +1,7 @@
 package mx.com.sungal.data;
 
+import org.springframework.data.jpa.repository.JpaRepository;
 import mx.com.sungal.domain.Bebida;
-import org.springframework.data.repository.CrudRepository;
 
-public interface BebidaDao extends CrudRepository<Bebida, Long>{
-    
+public interface BebidaDao extends JpaRepository<Bebida, Integer>{
 }

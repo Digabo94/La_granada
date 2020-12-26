@@ -7,15 +7,10 @@ import lombok.Data;
 @Data
 @Entity
 @Table(name = "verdura")
-public class Verdura implements Serializable{
-    
-    private static final Long serialVersionUID = 1L;
-    
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idVerdura;
-    private String nombre;
-    private String tamanio;
-    private String sabor;
-    
+public class Verdura extends Producto implements Serializable {
+
+    /*Clase bean*/
+    private static final Long serialVersionUID = 7L;
+
+    private Float almacen;
 }
