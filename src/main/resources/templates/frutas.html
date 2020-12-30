@@ -3,13 +3,29 @@
     <head xmlns:th="http://www.thymeleaf.org"
           xmlns="http://www.w3.org/1999/xhtml">
         <title>La granada</title>
-        <meta charset="UTF-8">
+        <meta charset="UTF-8"/>
             <link th:href="@{/css/main.css}" rel="stylesheet"/>
             <link th:href="@{/css/grid.css}" rel="stylesheet"/>
     </head>
     <body>
         <nav th:replace="layout/plantilla.html :: nav"></nav>
         <h1 th:text="Frutas"></h1>
+        <table>
+            <tr th:if="${frutas != null and !frutas.empty}">
+                <th th:text="ID"></th>
+                <th th:text="Nombre"></th>
+                <th th:text="Marca"></th>
+                <th th:text="Precio"></th>
+                <th th:text="Almacen"></th>
+            </tr>
+            <tr th:each="fruta : ${frutas}">
+                <td th:text="${fruta.idFruta}"></td>
+                <td th:text="${fruta.nombre}"></td>
+                <td th:text="${fruta.marca}"></td>
+                <td th:text="${fruta.precio}"></td>
+                <td th:text="${fruta.almacen}"></td>
+            </tr>
+        </table>
         <div th:replace="layout/plantilla.html :: btn_car"></div>
         <footer th:replace="layout/plantilla.html :: footer"></footer>
     </body>

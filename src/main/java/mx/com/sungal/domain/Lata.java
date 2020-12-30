@@ -6,12 +6,17 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name="lata")
-public class Lata extends Producto implements Serializable{
-    
+@Table(name = "lata")
+public class Lata implements Serializable {
+
     private static final Long serialVersionUID = 6L;
-    
-    private Float masa;
+
+    @Id
+    private Integer idLata;
+    private String masa;
     private String descripcion;
     private Integer almacen;
+    protected String nombre;
+    protected String marca;
+    protected Float precio;
 }

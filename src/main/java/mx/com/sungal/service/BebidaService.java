@@ -5,13 +5,17 @@ import org.springframework.stereotype.Service;
 import mx.com.sungal.data.BebidaDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import mx.com.sungal.domain.Bebida;
+import mx.com.sungal.domain.Bebida;
+import mx.com.sungal.service.IService;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.transaction.annotation.Transactional;
+
 
 @Service
 @Qualifier("BebidaService")
 public class BebidaService implements IService {
-
+//En esta clase va la logica del negocio
+    
     @Autowired
     BebidaDao bebidaDao;
 
@@ -42,5 +46,4 @@ public class BebidaService implements IService {
         Bebida bebida = (Bebida) obj;
         bebidaDao.delete(bebida);
     }
-
 }

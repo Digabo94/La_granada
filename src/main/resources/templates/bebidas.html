@@ -4,15 +4,38 @@
     <head>
         <title>La granada</title>
         <meta charset="UTF-8">
-        <link th:href="@{/css/main.css}" rel="stylesheet"/>
-        <link th:href="@{/css/grid.css}" rel="stylesheet"/>
+            <link th:href="@{/css/main.css}" rel="stylesheet"/>
+            <link th:href="@{/css/grid.css}" rel="stylesheet"/>
     </head>
     <body>
         <nav th:replace="layout/plantilla.html :: nav"></nav>
-        
+
         <h1>Bebidas y frituas</h1>
+        <div th:if="${bebidas != null && !bebidas.empty}">
+            <table>
+                <tr>
+                    <td th:text="ID"></td>
+                    <td th:text="Nombre"></td>
+                    <td th:text="Marca"></td>
+                    <td th:text="Descripcion"></td>
+                    <td th:text="Tamanio"></td>
+                    <td th:text="Precio"></td>
+                    <td th:text="Almacen"></td>
+                </tr>
+                <tr th:each="bebida : ${bebidas}">
+                    <td th:text="${bebida.idBebida}"></td>
+                    <td th:text="${bebida.nombre}"></td>
+                    <td th:text="${bebida.marca}"></td>
+                    <td th:text="${bebida.descripcion}"></td>
+                    <td th:text="${bebida.volumen}"></td>
+                    <td th:text="${bebida.precio}"></td>
+                    <td th:text="${bebida.almacen}"></td>
+                </tr>
+
+            </table>
+        </div>
         <div th:replace="layout/plantilla.html :: btn_car"></div>
-        
+
         <footer th:replace="layout/plantilla.html :: footer"></footer>
     </body>
 </html>

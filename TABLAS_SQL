@@ -3,7 +3,8 @@ TABLAS SQL:
 #bebida
 -id_bebida INT
 -nombre VARCHAR(45)
--volumen FLOAT
+-descripcion VARCHAR(45)
+-volumen VARCHAR(45)
 -marca VARCHAR(45)
 -precio FLOAT
 -almacen INT
@@ -25,7 +26,7 @@ TABLAS SQL:
 #fritura
 -id_fritura INT
 -nombre VARCHAR(45)
--masa FLOAT
+-masa VARCHAR(45)
 -marca VARCHAR(45)
 -precio FLOAT
 -almacen INT
@@ -40,7 +41,7 @@ TABLAS SQL:
 #lata
 -id_lata INT
 -nombre VARCHAR(45)
--masa FLOAT
+-masa varchar(45)
 -marca VARCHAR(45)
 -precio FLOAT
 -descripcion VARCHAR(150)
