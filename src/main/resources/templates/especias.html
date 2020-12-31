@@ -8,9 +8,48 @@
             <link th:href="@{/css/grid.css}" rel="stylesheet"/>
     </head>
     <body>
+
+        <!-------------------------------------------------------------Navbar-->
         <nav th:replace="layout/plantilla.html :: nav"></nav>
-        <h1 th:text="Especias"></h1>
-        <div th:replace="layout/plantilla.html :: btn_car"></div>
+
+        <!----------------------------------------------------Titulo articulo-->
+        <h1 th:text="Especias" class="titulo_articulo"></h1>
+
+        <!----------------------------------------------------Tabla articulos-->
+        <div class="row_h" id="contenedor_tablas">
+            <div class="col50" id="tabla">
+                <table>
+                    <tr>
+                        <th th:text="ID"></th>
+                        <th th:text="Nombre"></th>
+                        <th th:text="Marca"></th>
+                        <th th:text="Precio"></th>
+                        <th th:text="Almacen + '(' + Kg + ')'"></th>
+                        <th th:text="Agregar + ' ' + Art&iacute;culo"></th>
+                    </tr>
+                    <tr th:each="especia : ${especias}">
+                        <td th:text="${especia.idEspecia}"></td>
+                        <td th:text="${especia.nombre}"></td>
+                        <td th:text="${especia.marca}"></td>
+                        <td th:text="${especia.precio}"></td>
+                        <td th:text="${especia.almacen}"></td>
+                        <td> 
+                            <button th:replace="layout/plantilla :: btn_add"></button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div class="col50" id="tabla">
+                <table>
+                    <tr>
+                        <th th:text="Art&iacute;culo"></th>
+                        <th th:text="Quitar + ' ' + Art&iacute;culo"></th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <!-------------------------------------------------------------Footer-->
         <footer th:replace="layout/plantilla.html :: footer"></footer>
     </body>
 </html>

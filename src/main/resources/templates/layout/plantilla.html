@@ -8,10 +8,11 @@ and open the template in the editor.
       xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <title>TODO supply a title</title>
-        <meta charset="UTF-8">
+        <meta charset="UTF-8"/>
 
     </head>
     <body>
+        <!-------------------------------------------------Plantila de navbar-->
         <nav th:fragment="nav" class="nav_bar">
             <div>
                 <ul class="lista_nav">
@@ -34,24 +35,25 @@ and open the template in the editor.
                 </ul>
             </div>
         </nav>
-        
-        <div class="row_h" th:fragment="btn_car">
-            <button class="add" th:text="Agregar" id="btn_add"></button>
-            <button class="back" th:text="Regresar" id="btn_back"></button>
-        </div>
-        
+
+        <!--------------------------Plantila de boton para agregar aritulos-->
+
+        <button th:fragment="btn_add" class="add" th:text="Agregar" id="btn_add"></button>
+
+
+        <!-------------------------------------------------Plantila de footer-->
         <footer th:fragment="footer">
             <span class="direccion">
                 Direccion: Nogales, Sonora
-                <br>
-                    Colonia Las Bellotas #315
-                    <br>
-                        Calle Bellotas
-                        </span>
-                        <span class="email">
-                            Contacto: lagranada.contact@lagranada.com
-                        </span>
-                        </footer>
+                <br/>
+                Colonia Las Bellotas #315
+                <br/>
+                Calle Bellotas
+            </span>
+            <span class="email">
+                Contacto: lagranada.contact@lagranada.com
+            </span>
+        </footer>
 
-                        </body>
-                        </html>
+    </body>
+</html>

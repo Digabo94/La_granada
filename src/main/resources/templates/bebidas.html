@@ -8,34 +8,53 @@
             <link th:href="@{/css/grid.css}" rel="stylesheet"/>
     </head>
     <body>
+
+        <!-------------------------------------------------------------Navbar-->
         <nav th:replace="layout/plantilla.html :: nav"></nav>
 
-        <h1>Bebidas y frituas</h1>
-        <div th:if="${bebidas != null && !bebidas.empty}">
-            <table>
-                <tr>
-                    <td th:text="ID"></td>
-                    <td th:text="Nombre"></td>
-                    <td th:text="Marca"></td>
-                    <td th:text="Descripcion"></td>
-                    <td th:text="Tamanio"></td>
-                    <td th:text="Precio"></td>
-                    <td th:text="Almacen"></td>
-                </tr>
-                <tr th:each="bebida : ${bebidas}">
-                    <td th:text="${bebida.idBebida}"></td>
-                    <td th:text="${bebida.nombre}"></td>
-                    <td th:text="${bebida.marca}"></td>
-                    <td th:text="${bebida.descripcion}"></td>
-                    <td th:text="${bebida.volumen}"></td>
-                    <td th:text="${bebida.precio}"></td>
-                    <td th:text="${bebida.almacen}"></td>
-                </tr>
+        <!----------------------------------------------------Titulo articulo-->
+        <h1 th:text="Bebidas" class="titulo_articulo"></h1>
 
-            </table>
+        <!--------------------------------------------Tabla articulos-->
+        <div class="row_h"  id="contenedor_tablas">
+            <div class="col50" id="tabla">
+                <table>
+                    <tr>
+                        <th th:text="ID"></th>
+                        <th th:text="Nombre"></th>
+                        <th th:text="Marca"></th>
+                        <th th:text="Descripcion"></th>
+                        <th th:text="Tamanio"></th>
+                        <th th:text="Precio"></th>
+                        <th th:text="Almacen"></th>
+                        <th th:text="Agregar + ' ' + Art&iacute;culo"></th>
+                    </tr>
+                    <tr th:each="bebida : ${bebidas}">
+                        <td th:text="${bebida.idBebida}"></td>
+                        <td th:text="${bebida.nombre}"></td>
+                        <td th:text="${bebida.marca}"></td>
+                        <td th:text="${bebida.descripcion}"></td>
+                        <td th:text="${bebida.volumen}"></td>
+                        <td th:text="${bebida.precio}"></td>
+                        <td th:text="${bebida.almacen}"></td>
+                        <td> 
+                            <button th:replace="layout/plantilla :: btn_add"></button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col50" id="tabla">
+                <table>
+                    <tr>
+                        <th th:text="Art&iacute;culo"></th> 
+                        <th th:text="Quitar + ' ' + Art&iacute;culo"></th>
+                    </tr>
+                </table>
+            </div>
         </div>
-        <div th:replace="layout/plantilla.html :: btn_car"></div>
-
-        <footer th:replace="layout/plantilla.html :: footer"></footer>
+        <!----------------------------------------------------Footer-->
+        <div class="footer">
+            <footer th:replace="layout/plantilla.html :: footer"></footer>
+        </div>
     </body>
 </html>
